@@ -6,3 +6,7 @@ Map::Map(unsigned int w, unsigned int h)
 {
 	tiles = new Tile[width * height];
 }
+
+Map::~Map() {
+	delete[] tiles;
+}

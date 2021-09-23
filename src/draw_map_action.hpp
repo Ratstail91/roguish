@@ -3,8 +3,8 @@
 
 class DrawMapAction : public MapAction {
 public:
-	Map operator()(Map) override;
+	void operator()(Map const*) override;
 
 private:
-	void DrawTile(Tile);
+	void DrawTile(Tile const&);
 };

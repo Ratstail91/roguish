@@ -1,4 +1,5 @@
 #pragma once
+
 namespace IO {
 	void Init();
 	void Quit();

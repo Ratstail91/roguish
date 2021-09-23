@@ -1,4 +1,5 @@
 #pragma once
+
 //tile structure
 struct Tile {
 	enum Type {
@@ -15,6 +16,7 @@ class Map {
 public:
 	//methods
 	Map(unsigned int width, unsigned int height);
+	~Map();
 
 	//all public because friendships aren't inherited
 	Tile* tiles; //one block of memory
@@ -25,5 +27,5 @@ public:
 //perform an action to the map
 class MapAction {
 public:
-	virtual Map operator()(Map) = 0;
+	virtual void operator()(Map const*) = 0;
 };
